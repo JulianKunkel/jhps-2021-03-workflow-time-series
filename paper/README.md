@@ -99,6 +99,11 @@ approximated by the fractions of segments that are considered I/O intensive.
 
 
 ## Evaluation
+
+To run the workflow with popper use:
+$ popper run -f analysis.yml 
+
+
 The Run-Script `./run.sh` in the root directory of the repository extracts datasets in the dataset and evaluation directories.
 Then it clusters data and stores the results in the evaluation directory.
 Finally it run analysis scripts and stores output in the evaluation directory.

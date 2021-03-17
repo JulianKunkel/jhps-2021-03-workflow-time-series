@@ -100,14 +100,11 @@ approximated by the fractions of segments that are considered I/O intensive.
 
 ## Evaluation
 
-To run the workflow with popper use:
+The easy way to recreate the analysis from the data is to run the workflow with Popper.
+```
 $ popper run -f analysis.yml 
+```
+This will create an image from the provided dockerfile and perform the analysis steps.
 
-
-The Run-Script `./run.sh` in the root directory of the repository extracts datasets in the dataset and evaluation directories.
-Then it clusters data and stores the results in the evaluation directory.
-Finally it run analysis scripts and stores output in the evaluation directory.
-
-Clustering can take several hours on a super computer.
-Therefore, the folder `./evaluation` contains intermediate clustering results.
-The evaluation scripts can use them to re-produce figures, that were use in the "Evaluation" section in the paper.
+Alternatively, you may run the script `./unpack.sh` and then `./run.sh` in the paper directory.
+The outputs used in the evaluation section are then stored in the `fig` directory. 

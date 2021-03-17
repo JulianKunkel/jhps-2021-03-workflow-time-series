@@ -1,11 +1,7 @@
 steps:
-- id: dev-init
-  uses: docker://JulianKunkel/jhps-2021-03-workflow-time-series:paper/docker
+- id: unpack
+  uses: ./docker
   runs: [./unpack.sh]
 - id: build
-  uses: docker://JulianKunkel/jhps-2021-03-workflow-time-series:paper/docker
-  runs: [cmake, --build, build/, --parallel, '4']
-- id: test
-  uses: docker://JulianKunkel/jhps-2021-03-workflow-time-series:paper/docker
-  dir: scripts/
-  runs: [ctest]
+  uses: ./docker
+  runs: [./analyze.sh]

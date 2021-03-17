@@ -4,4 +4,5 @@ steps:
   runs: [./unpack.sh]
 - id: build
   uses: ./docker
+  skip_pull: true
   runs: [./analyze.sh]

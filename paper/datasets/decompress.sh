@@ -2,5 +2,5 @@
 
 for filename in *.xz; do
 	echo "Decompressing ${filename}"
-	tar -xJf "${filename}" 
+	xz -d "${filename}" 
 done
